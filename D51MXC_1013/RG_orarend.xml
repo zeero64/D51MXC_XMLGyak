@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mozi SYSTEM "RG_orarend.dtd">
+
+<orarend>
+	
+	<ora id="o1" tipus="EA+GY">
+		<targy>Mesterséges intelligencia alapok</targy>
+			<idopont>
+				<nap>2023.09.15</nap>
+				<tol>12.30</tol>
+				<ig>15.50</ig>
+			</idopont>
+		<helyszin>In/114</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o2" tipus="EA+GY">
+		<targy>Mesterséges intelligencia alapok</targy>
+			<idopont>
+				<nap>2023.09.15</nap>
+				<tol>16.00</tol>
+				<ig>19.20</ig>
+			</idopont>
+		<helyszin>In/114</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o3" tipus="EA+GY">
+		<targy>Web-es alkalmazások (Java)</targy>
+			<idopont>
+				<nap>2023.09.29</nap>
+				<tol>12.30</tol>
+				<ig>15.50</ig>
+			</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o4" tipus="EA+GY">
+		<targy>Adatkezelés XML-ben</targy>
+			<idopont>
+				<nap>2023.10.13</nap>
+				<tol>12.30</tol>
+				<ig>15.50</ig>
+			</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+
+	<ora id="o5" tipus="EA+GY">
+		<targy>Integrált vállalati rendszerek</targy>
+			<idopont>
+				<nap>2023.10.13</nap>
+				<tol>16.00</tol>
+				<ig>19.20</ig>
+			</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Dr. Samad Dadvandipour</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o6" tipus="EA+GY">
+		<targy>Mesterséges intelligencia alapok</targy>
+			<idopont>
+				<nap>2023.10.20</nap>
+				<tol>16.00</tol>
+				<ig>19.20</ig>
+			</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Fazekas Levente</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o7" tipus="EA+GY">
+		<targy>Integrált vállalati rendszerek</targy>
+			<idopont>
+				<nap>2023.10.27</nap>
+				<tol>12.30</tol>
+				<ig>15.50</ig>
+			</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Kulcsárné Dr.Forrai Mónika</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o8" tipus="EA+GY">
+		<targy>Adatkezelés XML-ben</targy>
+			<idopont>
+				<nap>2023.11.03</nap>
+				<tol>12.30</tol>
+				<ig>15.50</ig>
+			</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o9" tipus="EA+GY">
+		<targy>Integrált vállalati rendszerek</targy>
+			<idopont>
+				<nap>2023.11.10</nap>
+				<tol>12.30</tol>
+				<ig>15.50</ig>
+			</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Dr. Samad Dadvandipour</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o10" tipus="EA+GY">
+		<targy>Web-es alkalmazások (Java)</targy>
+			<idopont>
+				<nap>2023.11.17</nap>
+				<tol>12.30</tol>
+				<ig>15.50</ig>
+			</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o11" tipus="EA+GY">
+		<targy>Integrált vállalati rendszerek</targy>
+			<idopont>
+				<nap>2023.11.17</nap>
+				<tol>16.00</tol>
+				<ig>19.20</ig>
+			</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Kulcsárné Dr.Forrai Mónika</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o12" tipus="EA+GY">
+		<targy>Adatkezelés XML-ben</targy>
+			<idopont>
+				<nap>2023.11.24</nap>
+				<tol>12.30</tol>
+				<ig>15.50</ig>
+			</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+	<ora id="o13" tipus="EA+GY">
+		<targy>Web-es alkalmazások (Java)</targy>
+			<idopont>
+				<nap>2023.11.24</nap>
+				<tol>16.00</tol>
+				<ig>19.20</ig>
+			</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+
+	<ora id="o14" tipus="EA+GY">
+		<targy>Adatkezelés XML-ben</targy>
+			<idopont>
+				<nap>2023.12.08</nap>
+				<tol>12.30</tol>
+				<ig>15.50</ig>
+			</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Korszerű WEB tech.</szak>
+	</ora>
+	
+</orarend>
