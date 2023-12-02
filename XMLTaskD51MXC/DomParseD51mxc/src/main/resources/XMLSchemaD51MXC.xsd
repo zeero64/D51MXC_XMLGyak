@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="d51mxc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="database">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="szemelyek"><!-- A személyek fogják használni a bankot -->
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="szemely">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="teljes_nev">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="vezetek_nev" type="xs:string" />
+                          <xs:element name="kereszt_nev" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="szuletesi_datum" type="xs:string" />
+                    <xs:element name="elerhetosegek">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="elerhetoseg">
+                            <xs:complexType>
+                              <xs:attribute name="idref" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="elerhetosegek"><!-- Minden személynek van egy opcionális elérhetősége -->
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="elerhetoseg">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="letrehozva" type="xs:string" />
+                    <xs:element name="tipus" type="xs:string" />
+                    <xs:element name="eleres" type="xs:string" />
+                    <xs:element name="szemelyek">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="szemely">
+                            <xs:complexType>
+                              <xs:attribute name="idref" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="okiratok"><!-- Minden személynek van azonosító okirata -->
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="okirat">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="kiallitva" type="xs:string" />
+                    <xs:element name="tipus" type="xs:string" />
+                    <xs:element name="lejarat" type="xs:string" />
+                    <xs:element name="szemelyek">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="szemely">
+                            <xs:complexType>
+                              <xs:attribute name="idref" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="szamlak"><!-- A személyekhez tartozó számlák és egyenlegeik -->
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="szamla">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="letrehozva" type="xs:string" />
+                    <xs:element name="egyenleg" type="xs:unsignedInt" />
+                    <xs:element name="szemelyek">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="szemely">
+                            <xs:complexType>
+                              <xs:attribute name="idref" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tranzakciok"><!-- A lebonyolított tranzakciók a számlák között -->
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="tranzakcio">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="szemelyek">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="szemely">
+                            <xs:complexType>
+                              <xs:attribute name="idref" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="szamlak">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="szamla">
+                            <xs:complexType>
+                              <xs:attribute name="idref" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="datum" type="xs:string" />
+                    <xs:element name="osszeg" type="xs:unsignedShort" />
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
