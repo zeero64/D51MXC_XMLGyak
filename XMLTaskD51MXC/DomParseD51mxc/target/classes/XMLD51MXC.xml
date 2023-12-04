@@ -10,7 +10,7 @@
 				<vezetek_nev>Álmos</vezetek_nev>
 				<kereszt_nev>Ádám</kereszt_nev>
             </teljes_nev>
-			<szuletesi_datum>1999.09.09</szuletesi_datum>
+			<szuletesi_datum>1999-09-09</szuletesi_datum>
             <elerhetosegek>
                 <elerhetoseg idref="1" />
             </elerhetosegek>
@@ -21,7 +21,7 @@
 				<vezetek_nev>Balga</vezetek_nev>
 				<kereszt_nev>Béla</kereszt_nev>
             </teljes_nev>
-			<szuletesi_datum>2002.02.12</szuletesi_datum>
+			<szuletesi_datum>2002-02-12</szuletesi_datum>
             <elerhetosegek>
                 <elerhetoseg idref="2" />
             </elerhetosegek>
@@ -32,7 +32,7 @@
 				<vezetek_nev>Cukor</vezetek_nev>
 				<kereszt_nev>Cecil</kereszt_nev>
             </teljes_nev>
-			<szuletesi_datum>1981.08.28</szuletesi_datum>
+			<szuletesi_datum>1981-08-28</szuletesi_datum>
             <elerhetosegek>
                 <elerhetoseg idref="3" />
             </elerhetosegek>
@@ -42,7 +42,7 @@
 	<!-- Minden személynek van egy opcionális elérhetősége -->
     <elerhetosegek>
         <elerhetoseg id="1">
-			<letrehozva>2023.11.24</letrehozva>
+			<letrehozva>2023-11-24</letrehozva>
 			<tipus>Mobil</tipus>
 			<eleres>+36 30 123 45 67</eleres>
             <szemelyek>
@@ -50,7 +50,7 @@
             </szemelyek>
         </elerhetoseg>
         <elerhetoseg id="2">
-			<letrehozva>2023.11.25</letrehozva>
+			<letrehozva>2023-11-25</letrehozva>
 			<tipus>Mobil</tipus>
 			<eleres>+36 70 987 65 43</eleres>
             <szemelyek>
@@ -58,7 +58,7 @@
             </szemelyek>
         </elerhetoseg>
         <elerhetoseg id="3">
-			<letrehozva>2023.11.29</letrehozva>
+			<letrehozva>2023-11-29</letrehozva>
 			<tipus>Lakcim</tipus>
 			<eleres>Budapest 1111 Vizsgázó utca 4.</eleres>
             <szemelyek>
@@ -70,25 +70,25 @@
 	<!-- Minden személynek van azonosító okirata -->
     <okiratok>
         <okirat id="ABC111">
-			<kiallitva>2000.10.10</kiallitva>
+			<kiallitva>2000-10-10</kiallitva>
 			<tipus>Személyi igazolvány</tipus>
-			<lejarat>2032.10.10</lejarat>
+			<lejarat>2032-10-10</lejarat>
             <szemelyek>
                 <szemely idref="1" />
             </szemelyek>
         </okirat>
         <okirat id="EFG222">
-			<kiallitva>2023.03.03</kiallitva>
+			<kiallitva>2023-03-03</kiallitva>
 			<tipus>Jogosítvány</tipus>
-			<lejarat>2033.03.03</lejarat>
+			<lejarat>2033-03-03</lejarat>
             <szemelyek>
                 <szemely idref="2" />
             </szemelyek>
         </okirat>
         <okirat id="HIJ333">
-			<kiallitva>2022.12.12</kiallitva>
+			<kiallitva>2022-12-12</kiallitva>
 			<tipus>Személyi igazolvány</tipus>
-			<lejarat>2044.01.01</lejarat>
+			<lejarat>2044-01-01</lejarat>
             <szemelyek>
                 <szemely idref="3" />
             </szemelyek>
@@ -98,21 +98,21 @@
 	<!-- A személyekhez tartozó számlák és egyenlegeik -->
     <szamlak>
         <szamla id="1">
-			<letrehozva>2023.11.26</letrehozva>
+			<letrehozva>2023-11-26</letrehozva>
 			<egyenleg>500000</egyenleg>
             <szemelyek>
                 <szemely idref="1" />
             </szemelyek>
         </szamla>
         <szamla id="2">
-			<letrehozva>2023.11.27</letrehozva>
+			<letrehozva>2023-11-27</letrehozva>
 			<egyenleg>700000</egyenleg>
             <szemelyek>
                 <szemely idref="2" />
             </szemelyek>
         </szamla>
         <szamla id="3">
-			<letrehozva>2023.11.29</letrehozva>
+			<letrehozva>2023-11-29</letrehozva>
 			<egyenleg>5000</egyenleg>
             <szemelyek>
                 <szemely idref="2" />
@@ -131,7 +131,7 @@
                 <szamla idref="1" />
                 <szamla idref="2" />
             </szamlak>
-			<datum>2023.11.28</datum>
+			<datum>2023-11-28</datum>
 			<osszeg>2000</osszeg>
         </tranzakcio>
         <tranzakcio id="2">
@@ -143,7 +143,7 @@
                 <szamla idref="2" />
                 <szamla idref="3" />
             </szamlak>
-			<datum>2023.11.30</datum>
+			<datum>2023-11-30</datum>
 			<osszeg>1000</osszeg>
         </tranzakcio>
         <tranzakcio id="3">
@@ -155,7 +155,7 @@
                 <szamla idref="3" />
                 <szamla idref="1" />
             </szamlak>
-			<datum>2023.11.30</datum>
+			<datum>2023-11-30</datum>
 			<osszeg>1000</osszeg>
         </tranzakcio>
         <tranzakcio id="4">
@@ -167,7 +167,7 @@
                 <szamla idref="2" />
                 <szamla idref="1" />
             </szamlak>
-			<datum>2023.11.30</datum>
+			<datum>2023-11-30</datum>
 			<osszeg>1000</osszeg>
         </tranzakcio>
     </tranzakciok>
