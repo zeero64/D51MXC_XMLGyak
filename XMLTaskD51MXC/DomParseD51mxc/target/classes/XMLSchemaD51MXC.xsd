@@ -1,6 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <xs:schema targetNamespace="d51mxc" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+	<!-- Minden személynek van egy opcionális elérhetősége -->
+
   <xs:complexType name="elerhetosegek">
     <xs:sequence>
       <xs:element type="xs:string" name="letrehozva"/>
@@ -10,6 +12,8 @@
     <xs:attribute type="xs:string" name="idref" />
     <xs:attribute type="xs:string" name="id" />
   </xs:complexType>
+  
+	<!-- Minden személynek van azonosító okirata -->
   
   <xs:complexType name="okirat">
     <xs:sequence>
@@ -28,6 +32,8 @@
     </xs:sequence>
   </xs:complexType>
   
+	<!-- A személyek fogják használni a bankot -->
+  
   <xs:complexType name="szemely">
     <xs:sequence>
       <xs:element type="xs:date" name="szuletesi_datum"/>
@@ -35,6 +41,8 @@
     </xs:sequence>
     <xs:attribute type="xs:string" name="id" />
   </xs:complexType>
+  
+	<!-- A személyekhez tartozó számlák és egyenlegeik -->
   
   <xs:complexType name="szamla">
     <xs:sequence>
@@ -44,6 +52,8 @@
     <xs:attribute type="xs:string" name="idref" />
     <xs:attribute type="xs:string" name="id" />
   </xs:complexType>
+  
+	<!-- A lebonyolított tranzakciók a számlák között -->
   
   <xs:complexType name="tranzakcio">
     <xs:sequence>
@@ -57,6 +67,7 @@
     <xs:attribute type="xs:string" name="id" />
   </xs:complexType>
   
+	<!-- Definiálom az ismétlődő bejegyzések típusait (komplex típusok mert vannak gyerek-elemei) -->
   
 	<xs:element name="database">
 	
@@ -69,6 +80,8 @@
 			<xs:element type="tranzakcio" name="tranzakciok"/>
 		  </xs:sequence>
 		</xs:complexType>
+
+	<!-- Itt kezdődik az adatbázisom 5 db. "tábláinak" a kulcs definiálása -->
 
 		<xs:key name="elerhetosegId">
 		  <xs:selector xpath="./elerhetosegek/elerhetoseg"/>
@@ -94,6 +107,8 @@
 		  <xs:selector xpath="./tranzakciok/tranzakcio"/>
 		  <xs:field xpath="@id" />
 		</xs:key>
+
+	<!-- Itt kezdődnek az idegen kulcsok kapcsolatainak a felépítése (7 reláció) -->
 
 		<xs:keyref name="elerhetosegRef" refer="szemelyId">
 		  <xs:selector xpath="./szemelyek/szemely/elerhetosegek/elerhetoseg"/>
