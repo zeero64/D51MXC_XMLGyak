@@ -3,51 +3,48 @@ package hu.domparse.d51mxc;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
+import org.w3c.dom.Element;
 
 public class DomReadD51mxc {
 
     // A függvény átvesz egy beolvasott dokumentumot (argumentumként) és egy egy kifejezést a lekérdezéshez
-    public static void printnode(Document document, String expression) throws XPathExpressionException
+    public static void printAdat(Document document, String expression, String node)
     {
-        // Létrehozom az XPATH lekérdezőt
-        XPath xPath = XPathFactory.newInstance().newXPath();
-
-        // Beolvasom az útvonalat, XML adatbázis szegmenst
-        NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(document, XPathConstants.NODESET);
-
-            // Ha üres nincs mit kilistázni
-            if (nodeList.getLength() == 0)
-            {
-
-                System.out.println("Nem talalhato node, ellenorizd a kifejezest!");
-
-            }
-            // Ha egy bejegyzés akkor azt kilistázom
-            else if (nodeList.getLength() == 1)
-            {
-
-                System.out.println(nodeList.item(0).getTextContent());
-
-            }
-            // Egyébként feltételezem, hogy több is van, ekkor végig megyek rajta
-            else
-            {
-                // Beolvasom statikus adatként a hosszát
-                Integer counter = nodeList.getLength();
-
-                    for (int i = 0; i < counter; i++)
+ 
+            try {
+    
+                // Get the root element (in this case, <bookstore>)
+                Element rootElement = document.getDocumentElement();
+    
+                // Get a NodeList of all <book> elements
+                NodeList dataList = rootElement.getElementsByTagName(expression);
+    
+                // Iterate over each <book> element and retrieve the title
+                for (int i = 0; i < dataList.getLength(); i++) {
+                    Element databaseElement = (Element) dataList.item(i);
+                    String title = getTextContent(databaseElement, node);
+                    if(title != "N/A")
                     {
-
-                        System.out.println(i + ".");
-                        System.out.println(nodeList.item(i).getTextContent());
-
+                        System.out.println(node + ": " + title);
                     }
+
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+
+
+
         }
+
+            private static String getTextContent(Element parentElement, String childTagName) {
+                NodeList nodeList = parentElement.getElementsByTagName(childTagName);
+                if (nodeList.getLength() > 0) {
+                    return nodeList.item(0).getTextContent();
+                } else {
+                    return "N/A";
+                }
+            }
 
 
 }

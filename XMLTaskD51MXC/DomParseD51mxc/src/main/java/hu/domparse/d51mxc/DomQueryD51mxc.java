@@ -6,7 +6,6 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -33,25 +32,26 @@ public class DomQueryD51mxc
             // Normalizálom a fájlom (előtte utána üres karektereket levágom stb...)
             document.normalize();
 
-            // XPATH lekérdezések
+            System.out.println("Kilistázom a neveket:");
+            DomReadD51mxc.printAdat(document, "szemely", "teljes_nev");
 
-            System.out.println("Kiválasztom az utolsó személyt (függvénnyel):");
-            DomReadD51mxc.printnode(document, "/database/szemelyek/szemely[last()]");
+            System.out.println("Kilistázom az elérhetőségeket:");
+            DomReadD51mxc.printAdat(document, "elerhetoseg", "eleres");
 
-            System.out.println("Kiválasztom a második személyt:");
-            DomReadD51mxc.printnode(document, "/database/szemelyek/szemely[2]");
+            System.out.println("Kilistázom a számlák egyenlegeit:");
+            DomReadD51mxc.printAdat(document, "szamla", "egyenleg");
 
-            System.out.println("Kilistázom az összes számlát:");
-            DomReadD51mxc.printnode(document, "/database/szamlak/szamla");
+            System.out.println("Kilistázom a tranzakciókat:");
+            DomReadD51mxc.printAdat(document, "tranzakcio", "osszeg");
 
-            System.out.println("Kilistázom az összes tranzakciót:");
-            DomReadD51mxc.printnode(document, "/database/tranzakciok/tranzakcio");
+            System.out.println("Kilistázom az igazolványokat:");
+            DomReadD51mxc.printAdat(document, "okirat", "tipus");
 
-            System.out.println("Kilistázom az 1000 forintnál nagyobb tranzakciókat:");
-            DomReadD51mxc.printnode(document, "/database/tranzakciok/tranzakcio[osszeg>1000]");
+
+
 
         }
-        catch (URISyntaxException | ParserConfigurationException | IOException | SAXException | XPathExpressionException e) {
+        catch (URISyntaxException | ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
     }
