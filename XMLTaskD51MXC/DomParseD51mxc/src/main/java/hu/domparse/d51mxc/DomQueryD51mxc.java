@@ -32,18 +32,23 @@ public class DomQueryD51mxc
             // Normalizálom a fájlom (előtte utána üres karektereket levágom stb...)
             document.normalize();
 
+            // 1. Lekérdezés
             System.out.println("Kilistázom a neveket:");
             DomReadD51mxc.printAdat(document, "szemely", "teljes_nev");
 
+            // 2. Lekérdezés
             System.out.println("Kilistázom az elérhetőségeket:");
             DomReadD51mxc.printAdat(document, "elerhetoseg", "eleres");
 
+            // 3. Lekérdezés
             System.out.println("Kilistázom a számlák egyenlegeit:");
             DomReadD51mxc.printAdat(document, "szamla", "egyenleg");
 
+            // 4. Lekérdezés
             System.out.println("Kilistázom a tranzakciókat:");
             DomReadD51mxc.printAdat(document, "tranzakcio", "osszeg");
 
+            // 5. Lekérdezés
             System.out.println("Kilistázom az igazolványokat:");
             DomReadD51mxc.printAdat(document, "okirat", "tipus");
 

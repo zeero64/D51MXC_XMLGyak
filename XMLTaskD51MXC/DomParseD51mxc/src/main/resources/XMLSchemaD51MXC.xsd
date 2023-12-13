@@ -27,8 +27,8 @@
   
   <xs:complexType name="teljes_nev">
     <xs:sequence>
-      <xs:element name="vezetek_nev" />
-      <xs:element name="kereszt_nev" />
+      <xs:element name="vezetek_nev" minOccurs="1" maxOccurs="1" type="xs:string" />
+      <xs:element name="kereszt_nev" minOccurs="1" maxOccurs="1" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   
@@ -115,10 +115,10 @@
 		  <xs:field xpath="@idref" />
 		</xs:keyref>
 		
-		<xs:keyref name="okiratRef" refer="szemelyId">
+		<xs:unique name="okiratRef" refer="szemelyId">
 		  <xs:selector xpath="./okiratok/okirat/szemelyek/szemely"/>
 		  <xs:field xpath="@idref" />
-		</xs:keyref>
+		</xs:unique>
 		
 		<xs:keyref name="szamlaRef" refer="szemelyId">
 		  <xs:selector xpath="./szamlak/szamla/szemelyek/szemely"/>

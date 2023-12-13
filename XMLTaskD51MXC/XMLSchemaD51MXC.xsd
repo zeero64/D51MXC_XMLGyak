@@ -115,10 +115,10 @@
 		  <xs:field xpath="@idref" />
 		</xs:keyref>
 		
-		<xs:keyref name="okiratRef" refer="szemelyId">
+		<xs:unique name="okiratRef" refer="szemelyId">
 		  <xs:selector xpath="./okiratok/okirat/szemelyek/szemely"/>
 		  <xs:field xpath="@idref" />
-		</xs:keyref>
+		</xs:unique>
 		
 		<xs:keyref name="szamlaRef" refer="szemelyId">
 		  <xs:selector xpath="./szamlak/szamla/szemelyek/szemely"/>
