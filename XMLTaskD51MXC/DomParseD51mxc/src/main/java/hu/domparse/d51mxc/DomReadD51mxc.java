@@ -13,13 +13,13 @@ public class DomReadD51mxc {
  
             try {
     
-                // Get the root element (in this case, <bookstore>)
+                // Szülő objektum lekérdezése
                 Element rootElement = document.getDocumentElement();
     
-                // Get a NodeList of all <book> elements
+                // Gyermek objektum(ok) lekérdezése
                 NodeList dataList = rootElement.getElementsByTagName(expression);
     
-                // Iterate over each <book> element and retrieve the title
+                // Kilistázom a lekérdezett objektumokat
                 for (int i = 0; i < dataList.getLength(); i++) {
                     Element databaseElement = (Element) dataList.item(i);
                     String title = getTextContent(databaseElement, node);
@@ -33,10 +33,9 @@ public class DomReadD51mxc {
                 e.printStackTrace();
             }
 
-
-
         }
 
+            // Listázófüggvény
             private static String getTextContent(Element parentElement, String childTagName) {
                 NodeList nodeList = parentElement.getElementsByTagName(childTagName);
                 if (nodeList.getLength() > 0) {
